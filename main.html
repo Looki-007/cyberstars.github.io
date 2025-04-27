@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>День программиста от CYBERSTARS</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff9e9;
+        }
+
+        .navbar {
+            background-color: #1b156c;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+            .nav-links a {
+                color: white;
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 750;
+                transition: opacity 0.3s;
+            }
+
+                .nav-links a:hover {
+                    /*opacity: 0.8;*/
+                    color: #e4763de3;
+                }
+
+        .nomer {
+            color: white;
+            font-weight: 1000;
+            font-size: 24px;
+        }
+
+        .logo {
+            max-width: 150px;
+            margin-bottom: 20px;
+            padding-left: 20px;
+            /*position: relative;*/ /* Чтобы логотип был выше фона */
+            z-index: 2;
+        }
+        .image-container {
+            margin-bottom: -850px;
+        }
+        .photo-pryamoygol {
+            width: 100%;
+            height: auto;
+            clip-path: inset(0 0 50% 0); /* Обрезает нижние 50% */
+            filter: blur(4px);
+            transform: scale(1.01); /* Убирает прозрачные края */
+            z-index: 1;
+        }
+
+        .people-container {
+            display: flex;
+            gap: 70px;
+            margin-top: 0px;
+            position: relative;
+            z-index: 3;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Стили для круглых фото */
+        .person {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 3px solid #ff7132;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            background-color: #fff; /* На случай если фото не загрузится */
+        }
+
+            .person:hover {
+                transform: scale(1.1);
+            }
+
+            .person img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        .image-1 {
+            width: 100%;
+            height: auto;
+            margin-bottom: 30px;
+        }
+
+        .text {
+            text-align: center;
+        }
+
+        .map {
+            max-width: 1200px;
+            margin-bottom: 100px;
+            margin: auto;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="about_us.html">О нас</a>
+                <a href="FAQ.html">Часто задаваемые вопросы</a>
+                <a href="active.html">Активности</a>
+                <a href="hacaton.html">Хакатон</a>
+            </div>
+            <div class="nomer">cyberstars@mail.ru</div>
+        </div>
+    </nav>
+
+    <img src="images/logo2.png" alt="Логотип" class="logo">
+
+    <div class="image-1">
+        <img src="images/1.jpg" alt="Фоновое изображение" class="image-1">
+    </div>
+
+    <div class="text">
+        <h1>
+            Как добраться?
+        </h1>
+    </div>
+
+    <div class="map">
+        <img src="images/map2.jpg" alt="Карта" class="map">
+    </div>
+
+
+
+
+    <!--<div class="image-container">
+        <img src="images/kog.png" alt="Фоновое изображение" class="photo-pryamoygol">
+    </div>-->
+    <!--<div class="people-container">
+
+        <div class="person">
+            <img src="images/lika.jpg" alt="Сотрудник 1">
+        </div>
+        <div class="person">
+            <img src="images/julia.jpg" alt="Сотрудник 1">
+        </div>
+        <div class="person">
+            <img src="images/vike.jpg" alt="Сотрудник 1">
+        </div>
+        <div class="person">
+            <img src="images/kate.jpg" alt="Сотрудник 1">
+        </div>
+
+    </div>-->
+
+
+
+</body>
+</html>

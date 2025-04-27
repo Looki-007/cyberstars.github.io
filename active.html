@@ -1,0 +1,146 @@
+﻿<style>
+    .activities {
+        max-width: 800px;
+        margin: 40px auto;
+        font-family: 'Arial', sans-serif;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #1b156c;
+    }
+
+    .activity-section {
+        background: #fff;
+        border-radius: 12px;
+        padding: 25px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+        .activity-section h3 {
+            color: #1b156c;
+            font-size: 1.5rem;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+    .activity-list {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0 0;
+    }
+
+        .activity-list li {
+            padding: 15px 0;
+            border-bottom: 3px solid #eee;
+        }
+
+            .activity-list li:last-child {
+                border-bottom: none;
+            }
+
+        .activity-list strong {
+            color: #333;
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .activity-list p {
+            color: #666;
+            margin: 5px 0 0;
+            font-size: 0.95rem;
+        }
+
+    .highlight {
+        border: 3px solid #ff7132;
+    }
+
+    .hackathon-info {
+        margin-top: 15px;
+    }
+
+    .badge {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+        .badge.age {
+            background: #1b156c;
+            color: white;
+        }
+
+        .badge.registration {
+            background: #ff7132;
+            color: white;
+        }
+
+    .icon {
+        font-size: 1.3rem;
+    }
+    .programm{
+        color:white;
+    }
+</style>
+
+<div class="activities">
+
+
+    <div class="activity-section">
+        <h3><span class="icon">🎓</span> Лекции</h3>
+        <ul class="activity-list">
+            <li>
+                <strong>Введение в программирование</strong>
+                <p>Основные концепции и перспективы IT-профессий</p>
+            </li>
+            <li>
+                <strong>Язык Python: от простого к сложному</strong>
+                <p>От базового синтаксиса до реальных проектов</p>
+            </li>
+            <li>
+                <strong>Углубление в алгоритмы и структуры данных</strong>
+                <p>Как писать эффективный и оптимизированный код</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="activity-section">
+        <h3><span class="icon">🛠️</span> Мастер-классы</h3>
+        <ul class="activity-list">
+            <li>
+                <strong>Создание 2D игры на Unity</strong>
+                <p>Практическое руководство по геймдеву для начинающих</p>
+            </li>
+            <li>
+                <strong>Основы алгоритмов в Scratch</strong>
+                <p>Визуальное программирование для детей и новичков</p>
+            </li>
+            <li>
+                <strong>Создание Telegram-бота на Python</strong>
+                <p>От идеи до работающего прототипа за 2 часа</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="activity-section highlight">
+        <h3><span class="icon">💻</span> Хакатон</h3>
+        <div class="hackathon-info">
+            <strong>Разработка мобильной игры в казуальном жанре</strong>
+            <div class="details">
+                <span class="badge age">16+</span>
+                <span class="badge registration">Требуется предварительная регистрация</span>
+            </div>
+            <p>Командное соревнование с призовым фондом. Тема выбирается при старте мероприятия.</p>
+        </div>
+    </div>
+</div>
+

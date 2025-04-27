@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Команда CYBERSTARS</title>
+    <style>
+        :root {
+            --primary: #1b156c;
+            --accent: #ff7132;
+            --light: #fff9e9;
+            --white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: var(--light);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+            .header h1 {
+                font-size: 2.5rem;
+                color: var(--primary);
+                margin-bottom: 20px;
+            }
+
+            .header p {
+                font-size: 1.2rem;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+        .mission {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 50px;
+        }
+
+            .mission h2 {
+                color: var(--primary);
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+        .mission-items {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .mission-item {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .team {
+            margin-top: 60px;
+        }
+
+            .team h2 {
+                text-align: center;
+                color: var(--primary);
+                margin-bottom: 40px;
+                font-size: 2rem;
+            }
+
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .member {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+            .member:hover {
+                transform: translateY(-10px);
+            }
+
+        .person {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            margin: 0 auto 20px;
+            transition: transform 0.3s ease;
+        }
+
+            .person:hover {
+                transform: scale(1.05);
+            }
+
+            .person img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        .member h3 {
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .member .role {
+            color: var(--accent);
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .member .quote {
+            font-style: italic;
+            margin: 20px 0;
+            position: relative;
+        }
+
+            .member .quote::before,
+            .member .quote::after {
+                content: '"';
+                color: var(--accent);
+            }
+
+        .member .responsibilities {
+            margin-top: 20px;
+            font-size: 0.95rem;
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 60px;
+            padding: 30px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 10px;
+        }
+
+            .cta h2 {
+                margin-bottom: 20px;
+                font-size: 1.8rem;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Команда CYBERSTARS</h1>
+            <p>Мы — CYBERSTARS, команда, превращающая код в праздник!</p>
+        </div>
+
+        <div class="mission">
+            <h2>Наша миссия</h2>
+            <div class="mission-items">
+                <div class="mission-item"> Вдохновится нестандартными задачами</div>
+                <div class="mission-item"> Получит признание в IT-сообществе</div>
+                <div class="mission-item"> Насладится общением с единомышленниками</div>
+            </div>
+        </div>
+
+        <div class="team">
+            <h2>Знакомьтесь с командой</h2>
+
+            <div class="team-members">
+                <div class="member">
+                    <div class="person">
+                        <img src="images/lika.jpg" alt="Лика">
+                    </div>
+                    <h3>Лика</h3>
+                    <span class="role">Технический специалист</span>
+                    <p class="quote">Технологии должны быть доступны каждому!</p>
+                    <p class="responsibilities">Разрабатывает сайт, настраивает оборудование и цифровые решения.</p>
+                </div>
+
+                <div class="member">
+                    <div class="person">
+                        <img src="images/julia.jpg" alt="Юлия">
+                    </div>
+                    <h3>Юлия</h3>
+                    <span class="role">Организатор</span>
+                    <p class="quote">Идеальное мероприятие — это когда всё работает как часы!</p>
+                    <p class="responsibilities">Координирует программу, логистику и взаимодействие со спикерами.</p>
+                </div>
+
+                <div class="member">
+                    <div class="person">
+                        <img src="images/vike.jpg" alt="Виктория">
+                    </div>
+                    <h3>Виктория</h3>
+                    <span class="role">Креативщик</span>
+                    <p class="quote">IT — это не только код, но и эмоции!</p>
+                    <p class="responsibilities">Создает контент для соцсетей и креативные приглашения.</p>
+                </div>
+
+                <div class="member">
+                    <div class="person">
+                        <img src="images/kate.jpg" alt="Екатерина">
+                    </div>
+                    <h3>Екатерина</h3>
+                    <span class="role">Дизайнер</span>
+                    <p class="quote">Дизайн — это язык, который понимают все!</p>
+                    <p class="responsibilities">Разрабатывает фирменный стиль и оформляет пространство.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta">
+            <h2>Присоединяйтесь!</h2>
+            <p>Вместе мы создаём будущее IT.</p>
+        </div>
+    </div>
+</body>
+</html>

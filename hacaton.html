@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация на хакатон CYBERSTARS</title>
+    <style>
+        :root {
+            --primary: #1b156c;
+            --accent: #ff7132;
+            --light: #fff9e9;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+            .header h1 {
+                color: var(--primary);
+                margin-bottom: 10px;
+            }
+
+            .header p {
+                color: #666;
+            }
+
+        .registration-form {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+            .form-group label {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: bold;
+                color: var(--primary);
+            }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+
+            .form-control:focus {
+                border-color: var(--accent);
+                outline: none;
+            }
+
+        .team-members {
+            margin-top: 30px;
+        }
+
+        .member-item {
+            background-color: var(--light);
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .remove-member {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            background-color: #ff4757;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+            .btn:hover {
+                background-color: #e05a1a;
+            }
+
+        .btn-add {
+            background-color: var(--primary);
+            margin-top: 10px;
+        }
+
+            .btn-add:hover {
+                background-color: #0f0c4d;
+            }
+
+        .btn-submit {
+            width: 100%;
+            margin-top: 20px;
+            padding: 15px;
+        }
+
+        .requirements {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .error {
+            color: #ff4757;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .registration-form {
+                padding: 20px;
+            }
+        }
+
+        .photo {
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 50px;
+        }
+
+        .photo img {
+            width: 100%; 
+            height: auto; 
+        }
+        .logo {
+            margin-top: 30px;
+            max-width: 120px;
+            margin-bottom: 30px;
+            /*position: relative;*/ /* Чтобы логотип был выше фона */
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <!--<img src="images/logo2.png" alt="Логотип" class="logo">-->
+
+    <div class="photo">
+        <img src="images/hacaton1.jpg" alt="описание изображения">
+    </div>
+
+
+    <div class="container">
+        <div class="header">
+            <h1>Регистрация команды на хакатон</h1>
+
+
+            <p>Заполните форму для участия в хакатоне CYBERSTARS</p>
+        </div>
+
+        <form id="hackathonForm" class="registration-form">
+            <div class="form-group">
+                <label for="teamName">Название команды </label>
+                <input type="text" id="teamName" class="form-control" required>
+                <div class="error" id="teamNameError">Пожалуйста, введите название команды</div>
+            </div>
+
+            <div class="form-group">
+                <label for="teamLead">Капитан команды </label>
+                <input type="text" id="teamLead" class="form-control" required>
+                <div class="error" id="teamLeadError">Пожалуйста, введите имя капитана</div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email для связи </label>
+                <input type="email" id="email" class="form-control" required>
+                <div class="error" id="emailError">Пожалуйста, введите корректный email</div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Телефон </label>
+                <input type="tel" id="phone" class="form-control" required>
+                <div class="error" id="phoneError">Пожалуйста, введите номер телефона</div>
+            </div>
+
+
+            <div class="form-group">
+                <input type="checkbox" id="agreement" required>
+                <label for="agreement">Я согласен с правилами участия и обработкой персональных данных </label>
+                <div class="error" id="agreementError">Необходимо ваше согласие</div>
+            </div>
+
+            <button type="submit" class="btn btn-submit">Отправить заявку</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const membersContainer = document.getElementById('membersContainer');
+            const addMemberBtn = document.getElementById('addMember');
+            const form = document.getElementById('hackathonForm');
+
+            if (isValid) {
+                alert('Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.');
+                form.reset();
+            }
+        });
+                                        });
+    </script>
+</body>
+</html>

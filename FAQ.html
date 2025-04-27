@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBERSTARS - Частые вопросы</title>
+    <style>
+        :root {
+            --primary: #1b156c; /* Темно-синий */
+            --accent: #ff7132; /* Оранжевый */
+            --light: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        body {
+            background-color: #1b156c;
+            margin: 0;
+            padding: 0;
+        }
+
+        .faq-section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .faq-title {
+            text-align: center;
+            color: var(--accent);
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+
+        .faq-question {
+            padding: 18px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary);
+            transition: all 0.3s;
+        }
+
+            .faq-question:hover {
+                background-color: rgba(27, 21, 108, 0.05);
+            }
+
+            .faq-question::after {
+                content: '+';
+                font-size: 1.5rem;
+                color: var(--accent);
+                transition: transform 0.3s;
+            }
+
+            .faq-question.active::after {
+                content: '-';
+            }
+
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s, padding 0.3s;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 25px 20px;
+            max-height: 500px;
+        }
+
+        @media (max-width: 600px) {
+            .faq-question {
+                padding: 15px 20px;
+                font-size: 0.95rem;
+            }
+
+            .faq-answer {
+                padding: 0 20px;
+                font-size: 0.9rem;
+            }
+
+            .faq-item.active .faq-answer {
+                padding: 0 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="faq-section">
+        <h2 class="faq-title">Часто задаваемые вопросы</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">Как зарегистрироваться на хакатон?</div>
+            <div class="faq-answer">
+                <p>Регистрация проходит на нашем сайте. Заполните форму с указанием названием и капитаном команды.</p>
+                <p>Для хакатона требуется предварительная регистрация - места ограничены!</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Какие требования к участникам?</div>
+            <div class="faq-answer">
+                <p>Основные требования:</p>
+                <ul>
+                    <li>Возраст 16+ для участия в хакатоне</li>
+                    <li>Базовые знания программирования (для некоторых мастер-классов)</li>
+                    <li>Свой ноутбук для хакатона</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Какое оборудование будет предоставлено?</div>
+            <div class="faq-answer">
+                <p>Мы обеспечим:</p>
+                <ul>
+                    <li>Рабочие места с электричеством</li>
+                    <li>Скоростной Wi-Fi</li>
+                    <li>Проекторы и экраны для презентаций</li>
+                    <li>Кофе-брейки</li>
+                </ul>
+                <p>Ноутбуки и специализированное ПО участники приносят свои.(ДЛЯ УЧАСТНИКОВ ХАКАТОНА)</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Можно ли участвовать онлайн?</div>
+            <div class="faq-answer">
+                <p>Да, для онлайн-участников будет доступна:</p>
+                <ul>
+                    <li>Трансляция лекций и церемоний</li>
+                    <li>Возможность задавать вопросы спикерам</li>
+                    <li>Доступ к материалам после мероприятия</li>
+                </ul>
+                <p>Однако хакатон проводится только оффлайн.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Какие призы предусмотрены?</div>
+            <div class="faq-answer">
+                <p>Победители хакатона получат:</p>
+                <ul>
+                    <li>Сертификаты в онлайн-школы</li>
+                    <li>Стажировки в IT-компаниях</li>
+                    <li>Годовые подписки на профессиональные сервисы</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentNode;
+                item.classList.toggle('active');
+
+                // Закрытие других открытых вопросов
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
